@@ -44,7 +44,7 @@ cd <path-to>/BackEndAutomationPython
 2. Use `pip` to install dependencies.
 ```
 pip install -r requirements.txt
-``` 
+```
 3. You are ready to go! Follow [the tests execution](TestsExecution.md) documentation to start.
 
 ### Sources
