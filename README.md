@@ -12,8 +12,11 @@ Given the main goal is to consolidate concepts and expose a quality assurance ap
 ## Some practices used.
 
 **JSon schema validation**: in order to check the structure of the API responses, JSon schemas are used (supported by [jsonschema](https://pypi.org/project/jsonschema/)).
+
 **Utils custom modules**: aiming at keeping the steps definition as simple as possible, the code is organized in modules within the `steps/utils/` folder.
+
 **Scenarios tagging**: all scenarios are organized in suites based on priority and featured affected using [tags](https://behave.readthedocs.io/en/latest/tag_expressions.html).
+
 **Postmam mocking**: this is an extra mile. Given this project is mainly oriented on implementing a BDD automation framework for Python (no matter which API is under test), a Postman server is setup with some mocks in order to execute the tests (visit [this documentation](https://learning.postman.com/docs/designing-and-developing-your-api/mocking-data/setting-up-mock/)).
 
 ## Table of contents
