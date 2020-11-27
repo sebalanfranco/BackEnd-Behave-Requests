@@ -1,23 +1,9 @@
 {
-    "title": "add user response",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "add user",
     "type": "object",
     "properties": {
-        "data": {
-            "type": "object",
-            "properties": {
-                "id": {
-                    "type": "string"
-                },
-                "username": {
-                    "type": "string"
-                },
-                "name": {
-                    "type": "string"
-                },
-                "lastname": {
-                    "type": "string"
-                }
-            }
-        }
+        "data": { "$ref": "#/definitions/user" },
+        "metadata": { "$ref": "#/definitions/metadata" }
     }
 }

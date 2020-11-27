@@ -31,7 +31,7 @@ def call_rest_api(context, endpoint, body, headers={}, method='GET'):
 def set_default_headers(headers):
     default_headers = {}
     default_headers['content-type'] = 'application/json'
-    default_headers['x-mock-match-request-body'] = 'true'
+    default_headers['x-mock-match-request-body'] = 'true' # Header to force Postman mocks to check request body.
     if len(headers) > 0:
         default_headers + headers
     return default_headers
