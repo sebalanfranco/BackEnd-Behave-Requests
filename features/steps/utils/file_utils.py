@@ -1,13 +1,14 @@
-"""
-File utils.
+# File utils.
 
-Aiming at keeping the step definitions as simple as possible, the modules under "utils/" 
-folders contain the logic to interact with different entities and tools.
-"""
+# Aiming at keeping the step definitions as simple as possible, the modules under "utils/" 
+# folders contain the logic to interact with different entities and tools.
+
 
 import json
 
-# This method opens {schema_file} as json.
+# This method opens {schema_file} file as json.
+# Returns dictionary with the json file content.
 def get_json_file(schema_file):
     file = open(schema_file, 'r')
+    
     return json.loads(file.read().replace('\n', ''))
