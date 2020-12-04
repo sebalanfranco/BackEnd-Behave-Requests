@@ -21,7 +21,7 @@ Given the main goal is to consolidate concepts and expose a quality assurance ap
 
 ## Table of contents
 - [Pre-requisites and setup](docs/Setup.md)
-- [Testing approach](QA.md)
-- [Tests execution](TestsExecution.md)
-- [Reports](Reports.md)
-- [Conclusions](Conclusions.md)
+- [Testing approach](docs/QA.md)
+- [Tests execution](docs/TestsExecution.md)
+- [Reports](docs/Reports.md)
+- [Conclusions](docs/Conclusions.md)
