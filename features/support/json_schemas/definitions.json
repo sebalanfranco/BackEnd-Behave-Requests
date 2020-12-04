@@ -12,7 +12,11 @@
                 "message": {
                     "type": "string"
                 }
-            }
+            },
+            "required": [
+                "code",
+                "message" 
+            ]
         },
         "user": {
             "type": "object",
@@ -29,7 +33,11 @@
                 "lastname": {
                     "type": "string"
                 }
-            }        
+            },
+            "required": [
+                "id", 
+                "username"
+            ]       
         }
     }
 }

@@ -24,3 +24,4 @@ Feature: add users
         And the response body should have "data/lastname" equals to "Lanfranco"
         And the response body should have "data/email" equals to "sebalanfranco@whatever.com"
         And the repsonse body should be valid based on "add_user" schema
+        
