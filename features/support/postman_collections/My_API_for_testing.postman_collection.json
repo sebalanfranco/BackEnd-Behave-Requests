@@ -1,0 +1,458 @@
+{
+	"info": {
+		"_postman_id": "de313635-7d62-4bfa-b5f4-e4b1ba912a63",
+		"name": "My API for testing",
+		"description": "This is an API testing mock.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "https://postman-echo/users",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-mock-match-request-body",
+						"value": "true",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"sebalan\",\n    \"name\": \"Seba\",\n    \"lastname\": \"Lanfranco\",\n    \"email\": \"sebalanfranco@whatever.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://postman-echo/users/users",
+					"protocol": "https",
+					"host": [
+						"postman-echo"
+					],
+					"path": [
+						"users",
+						"users"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "https://postman-echo/users Bad Request (no name)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"sebalan\",\n    \"lastname\": \"Lanfranco\",\n    \"email\": \"sebalanfranco@whatever.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://postman-echo/users",
+							"protocol": "https",
+							"host": [
+								"postman-echo"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"code": 412,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"metadata\": {\n        \"code\": 412,\n        \"message\": \"Bad Request\"\n    },\n    \"data\": {\n        \"error_message\": \"The \\\"name\\\" is a required field.\"\n    }\n}"
+				},
+				{
+					"name": "https://postman-echo/users",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"sebalan\",\n    \"name\": \"Seba\",\n    \"lastname\": \"Lanfranco\",\n    \"email\": \"sebalanfranco@whatever.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://postman-echo/users",
+							"protocol": "https",
+							"host": [
+								"postman-echo"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"metadata\": {\n        \"code\": 201,\n        \"message\": \"Created\"\n    },\n    \"data\": {\n        \"id\": \"1\",\n        \"username\": \"sebalan\",\n        \"name\": \"Seba\",\n        \"lastname\": \"Lanfranco\",\n        \"email\": \"sebalanfranco@whatever.com\",\n        \"created_at\": \"{{$timestamp}}\"\n    }\n}"
+				},
+				{
+					"name": "https://postman-echo/users Bad Request (no username)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Seba\",\n    \"lastname\": \"Lanfranco\",\n    \"email\": \"sebalanfranco@whatever.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://postman-echo/users",
+							"protocol": "https",
+							"host": [
+								"postman-echo"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"code": 412,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"metadata\": {\n        \"code\": 412,\n        \"message\": \"Bad Request\"\n    },\n    \"data\": {\n        \"error_message\": \"The \\\"username\\\" is a required field.\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "https://postman-echo/users",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-mock-match-request-body",
+						"value": "true",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 1,\n    \"username\": \"sebalan\",\n    \"name\": \"Sebastian\",\n    \"lastname\": \"Lanfranco\",\n    \"email\": \"sebalanfranco@whatever.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://postman-echo/users/users",
+					"protocol": "https",
+					"host": [
+						"postman-echo"
+					],
+					"path": [
+						"users",
+						"users"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "https://postman-echo/users",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 1,\n    \"username\": \"sebalan\",\n    \"name\": \"Sebastian\",\n    \"lastname\": \"Lanfranco\",\n    \"email\": \"sebalanfranco@whatever.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://postman-echo/users",
+							"protocol": "https",
+							"host": [
+								"postman-echo"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"metadata\": {\n        \"code\": 200,\n        \"message\": \"OK\"\n    },\n    \"data\": {\n        \"id\": \"1\",\n        \"username\": \"sebalan\",\n        \"name\": \"Sebastian\",\n        \"lastname\": \"Lanfranco\",\n        \"email\": \"sebalanfranco@whatever.com\",\n        \"updated_at\": \"{{$timestamp}}\"\n    }\n}"
+				},
+				{
+					"name": "https://postman-echo/users Not Found",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 99,\n    \"username\": \"sebalan\",\n    \"name\": \"Sebastian\",\n    \"lastname\": \"Lanfranco\",\n    \"email\": \"sebalanfranco@whatever.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://postman-echo/users",
+							"protocol": "https",
+							"host": [
+								"postman-echo"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"metadata\": {\n        \"code\": 404,\n        \"message\": \"Not Found\"\n    },\n    \"data\": {\n        \"error_message\": \"The user does not exist.\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "https://postman-echo/users/{userId}",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "06ea25cb-8a14-47a4-9135-234dbc6b83f3",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://postman-echo/users/{userId}",
+					"protocol": "https",
+					"host": [
+						"postman-echo"
+					],
+					"path": [
+						"users",
+						"{userId}"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "https://postman-echo/users/99 Not Found",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://postman-echo/users/99",
+							"protocol": "https",
+							"host": [
+								"postman-echo"
+							],
+							"path": [
+								"users",
+								"99"
+							]
+						}
+					},
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "{\n    \"metadata\": {\n        \"code\": 404,\n        \"message\": \"Not Found\"\n    },\n    \"data\": {\n        \"error_message\": \"The user does not exist.\"\n    }\n}"
+				},
+				{
+					"name": "https://postman-echo/users/{{userId}}",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://postman-echo/users/1",
+							"protocol": "https",
+							"host": [
+								"postman-echo"
+							],
+							"path": [
+								"users",
+								"1"
+							]
+						}
+					},
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [],
+					"cookie": [],
+					"body": "{\n    \"metadata\": {\n        \"code\": 200,\n        \"message\": \"OK\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "https://postman-echo/users/{userId}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://postman-echo/users/{userId}",
+					"protocol": "https",
+					"host": [
+						"postman-echo"
+					],
+					"path": [
+						"users",
+						"{userId}"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "https://postman-echo/users/{{userId}}",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://postman-echo/users/{{userId}}",
+							"protocol": "https",
+							"host": [
+								"postman-echo"
+							],
+							"path": [
+								"users",
+								"{{userId}}"
+							]
+						}
+					},
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"metadata\": {\n        \"code\": 200,\n        \"message\": \"OK\"\n    },\n    \"data\": {\n        \"id\": {{userId}},\n        \"username\": \"sebalan\",\n        \"name\": \"Sebastian\",\n        \"lastname\": \"Lanfranco\",\n        \"email\": \"sebalanfranco@whatever.com\"\n    }\n}"
+				},
+				{
+					"name": "https://postman-echo/users/99 Not Found",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://postman-echo/users/99",
+							"protocol": "https",
+							"host": [
+								"postman-echo"
+							],
+							"path": [
+								"users",
+								"99"
+							]
+						}
+					},
+					"code": 404,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"metadata\": {\n        \"code\": 404,\n        \"message\": \"Not Found\"\n    },\n    \"data\": {\n        \"error_message\": \"The user does not exist.\"\n    }\n}"
+				}
+			]
+		}
+	],
+	"protocolProfileBehavior": {}
+}
