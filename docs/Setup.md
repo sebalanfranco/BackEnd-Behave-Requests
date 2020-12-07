@@ -45,7 +45,18 @@ cd <path-to>/BackEndAutomationPython
 ```
 pip install -r requirements.txt
 ```
-3. You are ready to go! Follow [the tests execution](TestsExecution.md) documentation to start.
 
 ### Sources
 [Python3 Guide](https://python3.guide/).
+
+## Postman mock server
+
+In order to test the scenarios created on this project, a Postman collection is added in order to create a mock server to execute the test cases against.
+To create the mock server, follow the steps bellow:
+
+- Install [Postman](https://www.postman.com/).
+- Import the collection [My_API_for_testing.postman_collection.json](https://github.com/sebalanfranco/BackEndAutomationPython/blob/master/features/support/postman_collections/My_API_for_testing.postman_collection.json).
+- From the collection's options, select "Mock collection".
+- Copy the mock server url and replace the `{POSTMAN_MOCK_SERVER_URL}` place holder from the Behave [configuration file](https://github.com/sebalanfranco/BackEndAutomationPython/blob/master/behave.ini).
+- You are ready to go! Follow [the tests execution](TestsExecution.md) documentation to start.
+
