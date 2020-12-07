@@ -52,7 +52,7 @@ pip install -r requirements.txt
 ## Postman mock server
 
 In order to test the scenarios created on this project, a Postman collection is added in order to create a mock server to execute the test cases against.
-To create the mock server, follow the steps bellow:
+To create the mock server, follow the steps bellow (more information on this Postman [documentation](https://learning.postman.com/docs/designing-and-developing-your-api/mocking-data/setting-up-mock/)):
 
 - Install [Postman](https://www.postman.com/).
 - Import the collection [My_API_for_testing.postman_collection.json](https://github.com/sebalanfranco/BackEndAutomationPython/blob/master/features/support/postman_collections/My_API_for_testing.postman_collection.json).
