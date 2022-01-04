@@ -25,3 +25,11 @@ Given the main goal is to consolidate concepts and expose a quality assurance ap
 - [Tests execution](docs/TestsExecution.md)
 - [Reports](docs/Reports.md)
 - [Conclusions](docs/Conclusions.md)
+
+## TODO
+- Implement a data driven approach.
+- Improve error handling, mainly on utils modules.
+- Support multi brower execution (currently only running in Chrome).
+- Improve locator by text (currently using XPath).
+- Improve reporting (maybe using Allure reports).
+- Improve code documentation.
